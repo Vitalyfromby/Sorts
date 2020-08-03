@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkids18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Play Regular'), local('Play-Regular'), url(https://fonts.gstatic.com/s/play/v11/6aez4K2oVqwIvtE2Gg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Play Bold'), local('Play-Bold'), url(https://fonts.gstatic.com/s/play/v11/6ae84K2oVqwItm4TCpQy3w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCv6KVjbNBYlgoC1CzjtGyI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCs6KVjbNBYlgoKew7z.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCv6KVjbNBYlgoCjC3jtGyI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCv6KVjbNBYlgoCxCvjtGyI.ttf) format('truetype');
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  position: relative;
+  left: 9%;
+  padding: 2%;
+}
+header .img_logo {
+  width: 5%;
+  height: 6%;
+  position: relative;
+  left: -2.5%;
+}
+header .UL_menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  position: relative;
+  left: 1%;
+}
+header .UL_menu li {
+  font-size: 1.5rem;
+  font-family: 'Ubuntu';
+  font-weight: normal;
+  margin-left: 45%;
+}
+header .UL_menu li a {
+  text-decoration: none;
+}
+header .UL_menu li a:link {
+  color: black;
+}
+header .UL_menu li a:visited {
+  color: black;
+}
+header .UL_menu li a:hover {
+  color: black;
+}
+header .UL_menu li a:active {
+  color: black;
+}
+header .UL_menu li a:hover {
+  border-bottom: 3px solid #ba4e38;
+  opacity: 0.6;
+}
+header .UL_social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+header .UL_social li {
+  margin-left: -25%;
+}
+header .UL_social li a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -2%;
+}
+header .UL_social li a .img_social_logo {
+  width: 14%;
+  margin: 0;
+  padding: 0;
+}
+header .img_social_logo:hover {
+  opacity: 0.6;
+}
+main {
+  margin: 0 auto;
+}
+main h1 {
+  width: 60%;
+  font-family: 'Source Sans Pro';
+  font-weight: lighter;
+  font-size: 1.5rem;
+  padding-bottom: 2%;
+  position: relative;
+  text-align: center;
+  left: 20%;
+  color: #434343;
+}
+main .block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 2%;
+}
+main .block .block_Txt {
+  font-family: 'Play';
+  width: 25%;
+  height: 25%;
+  text-align: center;
+  margin: 1% auto;
+  padding: 20px;
+  box-shadow: 3px 3px 10px 1  px gray;
+}
+main .block .block_Txt a {
+  text-decoration: none;
+}
+main .block .block_Txt a:link {
+  color: black;
+}
+main .block .block_Txt a:visited {
+  color: black;
+}
+main .block .block_Txt a:active {
+  color: black;
+}
+main .block .block_Txt img {
+  width: 100%;
+}
+main .block_Txt:hover {
+  opacity: 0.7;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-top: 2px solid #d2d2d2;
+  margin-left: 8%;
+  width: 85%;
+}
+footer h3 {
+  font-family: 'Source Sans Pro';
+  font-size: 1rem;
+  color: #ba4e38;
+}
+.about {
+  padding: 7%;
+  position: relative;
+  left: 13%;
+}
+.about img {
+  width: 10%;
+}
+.about h3 {
+  width: 40%;
+  font-family: 'Source Sans Pro';
+  font-weight: lighter;
+  font-size: 1rem;
+  float: left;
+}
+.about .img_big {
+  width: 30%;
+}
+.about .people ul {
+  list-style-type: none;
+  display: flex;
+}
+.about .people ul li {
+  position: relative;
+  right: 17.5%;
+  text-align: center;
+  width: 40%;
+  padding: 5%;
+  margin: 0;
+}
+.about .people ul li .people_img {
+  width: 30%;
+  border-radius: 50%;
+}
+.main_article {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Play';
