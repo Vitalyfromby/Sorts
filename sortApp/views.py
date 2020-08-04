@@ -3,7 +3,7 @@ from django.views import View
 
 from .sort_engine import Bubble, Insertion, Merge, Qsort
 from .forms import SortForm
-from .models import SortAlgorithms
+from .models import SortAlgorithms, TestCases, create_tests
 
 
 SORT_CLASSES = {
@@ -42,26 +42,46 @@ class SortView(View):
 
     def post(self, request):
         bound_form = self.form_class(request.POST, request.FILES)
+        unsorted_seq = None
+        sorted_seq = None
+        check = False
+
 
         if bound_form.is_valid():
 
             sort_class = SORT_CLASSES[bound_form.cleaned_data['Algorithm_type']]
             sort_obj = sort_class()
-            sort_obj.unsorted_file = request.FILES['unsorted_numbers']
-            sort_obj.unsorted_list = handle_uploaded_file(request.FILES['unsorted_numbers'])
+            if not TestCases.CREATED:
+                create_tests()
+            cases = TestCases.objects.all()
+            case_list = []
+            for case in cases:
+                case_list.append(case)
+            raw_case = case_list[0].unsorted_numbers
+            print(raw_case)
+            sort_obj.unsorted_list = raw_case.split(' ')
+            sort_obj.unsorted_list = [int(item) for item in sort_obj.unsorted_list]
             sort_obj.result, sort_obj.run_time = sort_obj.sort_list()
-            print(sort_obj.result)
-            print(sort_obj.run_time)
+            # print(sort_obj.result)
+            # print(sort_obj.run_time)
 
             new_model_obj = SortAlgorithms(
                 Algorithm_type=bound_form.cleaned_data['Algorithm_type'],
-                unsorted_numbers=sort_obj.unsorted_file,
-                sorted_result=sort_obj.result,
-                work_time=sort_obj.run_time
+                unsorted_seq=raw_case,
+                sorted_seq=sort_obj.result,
+                work_time=sort_obj.run_time,
+                test_check=False
             )
 
             new_model_obj.save()
+            unsorted_seq = raw_case
+            sorted_seq = sort_obj.result
 
             # return redirect(new_model_obj)
-        return render(request, self.template, context={'form': bound_form})
+        return render(request, self.template, context={
+            'form': bound_form,
+            'unsorted_seq': unsorted_seq,
+            'sorted_seq': sorted_seq,
+            'check': check
+        })
 

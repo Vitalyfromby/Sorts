@@ -1,5 +1,3 @@
-
-
 def time_counter(func):
     import time
 
@@ -16,7 +14,6 @@ def time_counter(func):
 class Algorithms:
 
     def __init__(self):
-        self.unsorted_file = None
         self.unsorted_list = None
         self.result = None
         self.run_time = None
